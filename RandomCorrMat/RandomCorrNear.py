@@ -1,5 +1,5 @@
 import numpy as np
-import numpy.linalg as LA
+import numpy.linalg as la
 
 
 def proj_spd(A):
@@ -53,10 +53,10 @@ def nearcorr(A, max_iterations=100, weights=None):
         ds = X - R
         Yold = Y.copy()
         Y = proj_unitdiag(X)
-        normY = LA.norm(Y, 'fro')
-        rel_diffX = LA.norm(X - Xold, 'fro') / LA.norm(X, 'fro')
-        rel_diffY = LA.norm(Y - Yold, 'fro') / normY
-        rel_diffXY = LA.norm(Y - X, 'fro') / normY
+        normY = la.norm(Y, 'fro')
+        rel_diffX = la.norm(X - Xold, 'fro') / la.norm(X, 'fro')
+        rel_diffY = la.norm(Y - Yold, 'fro') / normY
+        rel_diffXY = la.norm(Y - X, 'fro') / normY
 
     return X
 

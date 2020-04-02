@@ -1,5 +1,5 @@
 import numpy as np
-from numpy import linalg as LA
+from numpy import linalg as la
 
 # --------------------------------------------------------------------------------
 # Diagnostics
@@ -35,7 +35,7 @@ def isPD(corrmat):
     @param corrmat: numpy n x n ndarray
     @return: bool
     """
-    lambdas = LA.eigvalsh(corrmat)
+    lambdas = la.eigvalsh(corrmat)
     return all(lambdas>0)
 
 def isvalid_corr(corrmat):

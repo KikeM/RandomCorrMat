@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 import numpy as np
-from numpy import linalg as LA
+from numpy import linalg as la
 
 from .RandomCorrMatEigen import *
 
@@ -16,7 +16,7 @@ def perturb_randCorr(corr_mat):
     """
 
     # compute the smallest eigenvalue - lambda - of the corr matrix
-    eigenvals = LA.eigvalsh(corr_mat)
+    eigenvals = la.eigvalsh(corr_mat)
     lamb = min(eigenvals)
     # Create a random matrix with eigenvalues in [1-lamb, 1+lamb]
     perturb_eigenvalues = np.random.uniform(1-lamb, 1+lamb, corr_mat.shape[0])
