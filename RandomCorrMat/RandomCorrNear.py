@@ -18,12 +18,21 @@ def nearcorr(A, max_iterations=100, weights=None):
     """
     Finds the nearest correlation matrix to the symmetric matrix A.
 
-    @param A: symmetric numpy array (n x n)
-    @param max_iterations: is the maximum number of iterations (default 100)
-    @param weights: weights for the rows of the matrix A
-    @return: Correlation matrix
+    Parameters
+    ----------
+    A: np.array / pd.DataFrame
 
-    Note:
+    max_iterations: int
+
+    weights: np.array
+        weights.shape = A.shape
+
+    Returns
+    -------
+    np.array
+
+    Notes
+    -----
     This is a partial working port of the original MATLAB code by N. J. Higham,
     https://nickhigham.wordpress.com/2013/02/13/the-nearest-correlation-matrix/
 
